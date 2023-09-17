@@ -5,16 +5,12 @@ byte clk = 2;
 byte dt = 3;
 byte sw = 4;
 
-//  counting rotations
 int counter = 0;
 
-//  to avoid repetition
 int flag = 1 , prev_counter = -1;
 
-//  buzzer pin
 const byte buzzer_pin = 5;
 
-//  button object
 ezButton button(sw);
 
 void setup(){
@@ -34,7 +30,6 @@ void loop(){
 
   choose_mode();
 
-  //  for better working of simulator
   delay(10);
 }
 
@@ -93,7 +88,6 @@ void coffin_dance(){
   NOTE_A5, NOTE_AS5, NOTE_A5, NOTE_AS5
  };
 
-// note durations: 4 = quarter note, 8 = eighth note, etc.:
 int noteDurations[] = {
   4,4,4,4,
   4,4,4,4,
